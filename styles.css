@@ -1,5 +1,7 @@
 body {
     margin: 0;
-    background: red;
+    background-color: black;
+    color: white;
+    text-shadow: wheat;
     text-align: center;
 }
