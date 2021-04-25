@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Guy D'Mellos Resume</title>
+<title>Guy D'Mello CV</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -10,101 +10,238 @@
 }
 
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: lightgrey;
-  color: black;
-  line-height: 1.8;
 }
 
 /* Style the header */
-header {
-  background-color: rgb(155, 155, 155);
+.header {
+  background-color: black;
   padding: 1px;
-  text-align: left;
+  text-align: center;
   font-size: 30px;
   color: white;
   line-height: 10px;
-  margin-left: 200px;
   text-indent: 10px;
 }
 
-
-/* Style the side navigation */
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111111;
-  overflow-x: hidden;
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+  background-color: black;
 }
 
+/* Create two unequal columns that sits next to each other */
+.column {
+  padding: 10px;
+  background-color: black;
+}
+
+/* Left and right column */
+.column.left {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 0.5;
+   background-color: black;
+   line-height: 1.8
+}
+
+/* Middle column */
+.column.right {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  line-height: 1.8
+}
 
 /* Side navigation links */
-.sidenav a {
-  color: white;
+.column.left a {
+  color: black;
   padding: 16px;
   text-decoration: none;
   display: block;
+  background-color: rgb(185, 185, 185);
 }
 
 /* Side Navigation Contact */
-.sidenav b {
-    color: white;
+.column b {
+    color: black;
     padding: 16px;
     text-decoration: none;
     display: block;
+    background-color: rgb(185, 185, 185);
 }
 
 /* Change color on hover */
-.sidenav a:hover {
+.column.left a:hover {
   background-color: #ddd;
   color: black;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-/* Style the content */
-.content {
-  margin-left: 200px;
-  padding-left: 20px;
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+    color: black;
+    size: 10px;
 }
 
-h2 {
-  color: black;
+code:hover {
+    background-color: yellow;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+    color: black;
 }
+
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 500px) {
+  .row {
+    -webkit-flex-direction: row;
+    flex-direction: column;
+    background-color: lightgray;
+    flex-wrap: nowrap;
+    align-items: auto;
+    justify-content: flex-start;
+    flex-shrink: 1;
+  }
+}
+
+.column.right a {
+    color: black;
+    text-decoration: none;
+    /* display: block; */
+}
+
 </style>
 </head>
 <body>
-    <header>
-        <h2>Guy D'Mello</h2>
-    </header>
 
-<div class="sidenav">
-    <b>Contact Info</b>
-    <a href="https://www.linkedin.com/in/guydmello/">LinkedIn &#128187 </a>
-    <a href="https://github.com/guydmello">GitHub &#128218</a>
-    <a href="https://www.twitch.tv/geezus_almighty">Twitch &#127918</a>
-    <a href="mailto: guyrdmello@gmail.com">Email &#9993</a>
-    <b><small><small>For more information, please contact me via email.</small></small></b>
+<div class="header">
+  <h2>Guy D'Mello</h2>
 </div>
 
-<div class="content">
-    <h2>Education:</h1>
-    <ul>
-        <li>University of Toronto (UofT) - (2019-current)</li>
+<div class="row">
+    <div class="column left" style="background-color:rgb(185, 185, 185);">
+        <b>Contact Info:</b>
+        <a href="https://www.linkedin.com/in/guydmello/">LinkedIn &#128187 </a>
+        <a href="https://github.com/guydmello">GitHub &#128218</a>
+        <a href="https://www.twitch.tv/geezus_almighty">Twitch &#127918</a>
+        <a href="mailto: guyrdmello@gmail.com">Email &#9993</a>
+        <b><small><small>For more information, please contact me via email.</small></small></b>
+    </div>
+    <div class="column right" style="background-color:white;">
+        <h2>Education:</h1>
+        <ul>
+            <li>University of Toronto (UofT) - (2019-current)</li>
             <ul>
                 <li>Honours Bachelor of Science</li>
                 <li>Relevant Courses: Computer Science, Theory of Computation, Spatial Data Science, Geographical Information Systems, Linear Algebra, Calculus</li>
             </ul>
-        <li>Michael Power/St. Joseph High School - (2014 - 2019)</li>
+            <li>Michael Power/St. Joseph High School - (2014 - 2019)</li>
             <ul>
                 <li>Ontario Secondary School Diploma</li>
             </ul>
-    </ul> 
-    <p>A full-height, fixed sidenav and content.</p>
+        </ul> 
+        <h2>Work Experience:</h2>
+        <ul>
+            <li>Thor and Partners, Summer Student Job – (June - September 2019)</li>
+            <ul>
+                <li>Reviewed project details to specify correct materials and equipment for job sites.</li>
+                <li>Maximized resource utilization and achieved targets.</li>
+            </ul>
+            <li>Revera Inc., Student Job – (September 2016 - September 2018)</li>
+            <ul>
+                <li>Prepared supplies, features, and workstations during opening and closing procedures to maximize efficiency.</li>
+                <li>Closely followed guidelines while assisting the head chef with all the daily preparation.</li>
+            </ul>
+        </ul>
+        <h2>Projects:</h2>
+        <ul>
+            <li> <a href="https://github.com/guydmello/Courses/tree/main/csc148/assignments/a0/starter"><code>Hospital_System.py</code></a></li>
+            <ul>
+                <li>implementation of classes and methods for loading and storing the day-to-day operation of a pretend hospital over an arbitrary frame of time.</li>
+            </ul>
+            <li><a href="https://github.com/guydmello/Courses/tree/main/csc148/assignments/a2/starter"><code>Huffman_tree_compression.py</code></a></li>
+            <ul>
+                <li>Operated with tree data structures in a real-world context.</li>
+                <li>Implemented recursive operations on trees.</li>
+                <li>Applied an algorithm to generate a Huffman tree in python, taking design decisions with efficiency in mind.</li>
+                <li>Implement building blocks for the algorithm to compress data with a Huffman encoding.</li>
+                <li>Assessed possible improvements to a sub-optimal tree and the changes needed to generate an improved tree.</li>
+            </ul>
+            <li><a href="https://github.com/guydmello/Courses/tree/main/csc148/assignments/a1/starter_code"><code>Python_Air's_Frequent_Flyer_System.py</code></a></li>
+            <ul>
+                <li>perform test-driven development via unit-testing with pytest, specifically:</li>
+                <ul>
+                    <li>considering both generic and edge cases to ensure robust code.</li>
+                </ul>
+                <li>ensure that your code follows the OOP design principles.</li>
+            </ul>
+        </ul>
+        <h2>Programming Languages/Softwares:</h2>
+        <ul>
+            <li>Python (Datetime, Pygame, Tkinter)</li>
+            <li>LaTex</li>
+            <li>Java</li>
+            <li>Html</li>
+            <li>CSS</li>
+            <li>R</li>
+            <li>Arcgis</li>
+        </ul>
+        <h2>Skills:</h2>
+        <ul>
+            <li>Team Leadership</li>
+            <li>Critical Thinking</li>
+            <li>MS Office Suite, including:</li>
+            <ul>
+                <li>Microsoft SharePoint</li>
+                <li>Microsoft Visio</li>
+            </ul>
+            <li>Public Speaking</li>
+            <li>Customer Service</li>
+            <li>Build Relationships</li>
+            <li>Adobe Creative Suite</li>
+        </ul>
+        <h2>Personal Skills:</h2>
+        <ul>
+            <li>Adaptability</li>
+            <li>Problem-solving</li>
+            <li>Organized</li>
+            <li>Productive</li>
+            <li>Detail-Oriented</li>
+            <li>Collaborative</li>
+        </ul>
+        <h2>Awards:</h2>
+        <ul>
+            <li>Ontario Scholar Award</li>
+            <li>4 Year Honour Roll Certificate</li>
+            <li>Excellence in Arts & Technology Certificate</li>
+            <li>Honour Roll Grade 5 & 8</li>
+            <li>School Spirit and Leadership Award</li>
+            <li>The Matthew Del Fatti Memorial Award for good conduct, sportsmanship & ability</li>
+        </ul>
+        <h2>Activities and Interests:</h2>
+        <ul>
+            <li>⚽ Soccer</li>
+            <li>🏓 Table Tennis</li>
+            <li>🎿 Skiing</li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+  <p><code>System.out.println("Hello, World!");</code></p>
 </div>
 
 </body>
