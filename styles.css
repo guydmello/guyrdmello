@@ -3,3 +3,11 @@ body {
     background: red;
     text-align: center;
 }
+@media print {
+    body{
+        width: 21cm;
+        height: 29.7cm;
+        margin: 30mm 45mm 30mm 45mm; 
+        /* change the margins as you want them to be. */
+   } 
+}
