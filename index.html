@@ -19,7 +19,7 @@ body {
   padding: 1px;
   text-align: center;
   font-size: 30px;
-  color: white;
+  color: #127969;
   line-height: 10px;
   text-indent: 10px;
 }
@@ -35,86 +35,92 @@ body {
 .column {
   padding: 10px;
   background-color: black;
+  background-image: linear-gradient(#092019 , black);
 }
 
 /* Left and right column */
 .column.left {
-   -webkit-flex: 1;
-   -ms-flex: 1;
-   flex: 0.5;
-   background-color: black;
-   line-height: 1.8
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 0.5;
+    background-color: black;
+    line-height: 1.8
 }
 
 /* Middle column */
 .column.right {
-  -webkit-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
-  line-height: 1.8
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    line-height: 1.8
+}
+
+.vl {
+  border-left: 4px solid #127969;
+  height: 2300px;
+  display: -webkit-flex;
+  display: flex;
 }
 
 /* Side navigation links */
 .column.left a {
-  color: black;
+  color: #127969;
   padding: 16px;
   text-decoration: none;
   display: block;
-  background-color: rgb(185, 185, 185);
 }
 
 /* Side Navigation Contact */
 .column b {
-    color: black;
+    color: #127969;
     padding: 16px;
     text-decoration: none;
     display: block;
-    background-color: rgb(185, 185, 185);
 }
+
+/* Side Navigation Contact */
+.column c {
+    color: #127969;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}  
 
 /* Change color on hover */
 .column.left a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: black;
+  color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 code {
-    background-color: #eee;
     border-radius: 3px;
     font-family: courier, monospace;
     padding: 0 3px;
-    color: black;
+    color: #127969;
     size: 10px;
 }
 
 code:hover {
-    background-color: yellow;
+    background-color: black;
     border-radius: 3px;
     font-family: courier, monospace;
     padding: 0 3px;
-    color: black;
-}
-
-
-/* Style the footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
+    color: white;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (max-width: 500px) {
-  .row {
-    -webkit-flex-direction: row;
-    flex-direction: column;
-    background-color: lightgray;
-    flex-wrap: nowrap;
-    align-items: auto;
-    justify-content: flex-start;
-    flex-shrink: 1;
-  }
+    .row {
+        -webkit-flex-direction: row;
+        flex-direction: column;
+        background-color: lightgray;
+        flex-wrap: nowrap;
+        align-items: auto;
+    }
+    .vl{
+        display: none;
+    }
 }
 
 .column.right a {
@@ -132,15 +138,16 @@ code:hover {
 </div>
 
 <div class="row">
-    <div class="column left" style="background-color:rgb(185, 185, 185);">
+    <div class="column left" style="background-color:#0b0b0b;">
         <b>Contact Info:</b>
         <a href="https://www.linkedin.com/in/guydmello/">LinkedIn &#128187 </a>
         <a href="https://github.com/guydmello">GitHub &#128218</a>
         <a href="https://www.twitch.tv/geezus_almighty">Twitch &#127918</a>
         <a href="mailto: guyrdmello@gmail.com">Email &#9993</a>
-        <b><small><small>For more information, please contact me via email.</small></small></b>
+        <c><small><small>For more information, please contact me via email.</small></small></c>
     </div>
-    <div class="column right" style="background-color:white;">
+    <div class="vl"></div>
+    <div class="column right" style="background-color:#0b0b0b; color: #127969;">
         <h2>Education:</h1>
         <ul>
             <li>University of Toronto (UofT) - (2019-current)</li>
@@ -238,10 +245,6 @@ code:hover {
             <li>🎿 Skiing</li>
         </ul>
     </div>
-</div>
-
-<div class="footer">
-  <p><code>System.out.println("Hello, World!");</code></p>
 </div>
 
 </body>
